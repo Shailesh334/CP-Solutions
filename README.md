@@ -3,7 +3,7 @@
 
 Synced automatically by SolveBase.
 
-**Total solved: 0**
+**Total solved: 1**
 
 ## Codeforces
 
@@ -20,11 +20,11 @@ Solutions by [shailesh_334](https://codeforces.com/profile/shailesh_334), organi
 
 Solutions organized by primary topic folder.
 
-**Solved: 0**
+**Solved: 1**
 
 | Topic | Solved |
 | --- | --- |
-| — | 0 |
+| [array](./leetcode/array) | 1 |
 
 
 ## CSES
@@ -60,5 +60,5 @@ Solutions organized by difficulty level.
 | — | 0 |
 
 
-_Last updated: 2026-08-19_
+_Last updated: 2026-08-20_
 <!-- /cf-sync -->
