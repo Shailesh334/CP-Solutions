@@ -3,7 +3,7 @@
 
 Synced automatically by SolveBase.
 
-**Total solved: 18**
+**Total solved: 19**
 
 ## Codeforces
 
@@ -21,7 +21,7 @@ Solutions by [shailesh_334](https://codeforces.com/profile/shailesh_334), organi
 
 Solutions organized by primary topic folder.
 
-**Solved: 6**
+**Solved: 7**
 
 | Topic | Solved |
 | --- | --- |
@@ -29,6 +29,7 @@ Solutions organized by primary topic folder.
 | [bit-manipulation](./leetcode/bit-manipulation) | 1 |
 | [dynamic-programming](./leetcode/dynamic-programming) | 1 |
 | [math](./leetcode/math) | 1 |
+| [queue](./leetcode/queue) | 1 |
 
 
 ## CSES
