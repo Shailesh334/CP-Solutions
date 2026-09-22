@@ -1,33 +1,59 @@
 class Solution {
 public:
     vector<int> findMissingAndRepeatedValues(vector<vector<int>>& grid) {
-        int n = grid.size();
-        int xor1 = 0;
-        for(int i = 1 ; i<= n*n ; i++){
-            xor1 = xor1 ^ i;
+    
+    int xorall = 0;
+    int n = grid.size();
+    for(vector<int> arr : grid){
+        for(int i : arr){
+            xorall ^= i;
         }
+    }
 
-        int xor2 = 0;
-        unordered_map<int , int> mp;
-        int repetead = 0;
-        for(int i = 0 ; i<n; i++){
-            for(int j = 0 ; j < grid[i].size(); j++){
-                xor2 = xor2 ^ grid[i][j];
+    for(int i = 1 ; i<= n*n ; i++){
+        xorall ^= i;
+    }
 
-                if(mp.count(grid[i][j])){
-                    repetead = grid[i][j];
+    int rsbm = xorall & -xorall;
+    int num1 = 0;
+    int num2 = 0;
+
+      for(vector<int> arr : grid){
+        for(int i : arr){
+                if((rsbm & i) == 0){
+                num1 ^= i;
                 }
                 else{
-                    mp[grid[i][j]]++;
+                    num2 ^= i;
                 }
             }
         }
 
-        int res = xor1 ^ xor2;
+       for(int i = 1 ; i<= n*n ; i++){
+            if((rsbm & i) == 0){
+                num1 ^= i;
+                }
+                else{
+                    num2 ^= i;
+                }
+        }
+ 
+        int repeated = 0 , missing = 0;
+        for(vector<int> arr : grid){
+            for(int i : arr){
+                if(num1 == i){
+                    repeated = num1;
+                    missing = num2;
+                    break;
+                }
+                if(num2 == i){
+                    repeated = num2;
+                    missing = num1;
+                    break;
+                }
+            }
+        }
 
-        int missing = res ^ repetead;
-
-        return { repetead , missing};
-      
+        return {repeated , missing};
     }
 };
